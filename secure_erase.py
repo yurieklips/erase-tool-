@@ -28,7 +28,7 @@ def overwrite_disk(disk_path, passes=3):
             disk.seek(0)
             for i in range(passes):
                 print(f"Effacement en profondeur: passage {i + 1}/{passes}")
-                disk.write(os.urandom(1024 * 1024))  # Écrit des données aléatoires
+                disk.write(os.urandom(1024 * 1024))  
         print(f"Disque {disk_path} effacé avec succès.")
     except Exception as e:
         print(f"Erreur lors de l'effacement du disque {disk_path}: {str(e)}")
